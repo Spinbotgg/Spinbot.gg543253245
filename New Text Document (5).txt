@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>spinbot.gg</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 200vh; /* Increase height to enable scrolling */
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        animation: changeBackgroundColor 6s ease-in-out infinite alternate;
+    }
+
+    @keyframes changeBackgroundColor {
+        0% {
+            background-color: #f0f0f0;
+        }
+        50% {
+            background-color: #007bff; /* Change to desired color */
+        }
+        100% {
+            background-color: #f0f0f0;
+        }
+    }
+
+    .fade-in-out {
+        font-size: 3em;
+        text-align: center;
+        margin-top: 30vh;
+        font-style: italic;
+    }
+
+    .arrow-down {
+        text-align: center;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .arrow-down::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-left: 2px solid black;
+        border-bottom: 2px solid black;
+        transform: rotate(-45deg);
+        margin: auto;
+    }
+
+    .scroll-squares {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60vh;
+    }
+
+    .square {
+        width: 150px;
+        height: 150px;
+        background-color: #007bff;
+        background-image: linear-gradient(45deg, #007bff, #ffffff);
+        background-size: 200% 200%;
+        color: white;
+        text-align: center;
+        line-height: 150px;
+        font-size: 1.2em;
+        margin: 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-position 0.5s;
+    }
+
+    .square:hover {
+        background-position: right bottom;
+    }
+
+    .base-cheat-features {
+        text-align: center;
+        margin-top: 100vh;
+    }
+
+    .base-cheat-features h2 {
+        margin-bottom: 20px;
+    }
+
+    .base-cheat-features p {
+        font-size: 1.2em;
+        line-height: 1.5;
+    }
+
+    .discord-button {
+        text-align: center;
+        display: block;
+        margin: 20px auto;
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .discord-logo {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 50px;
+        height: 50px;
+        background-image: url('https://cdn.discordapp.com/attachments/1225942222084636794/1226522273809436672/Purple_and_Black_Neon_Sci_Fi_Discord_Logo.gif?ex=662512e1&is=66129de1&hm=63efcb1c5f25fb8db5257a94d57ecdf827f67dfc7f16c314d6539c1e284c2253&');
+        background-size: cover;
+    }
+</style>
+</head>
+<body>
+    <div class="discord-logo"></div>
+    <div class="fade-in-out">Cheating Reimagined with Spinbot.gg</div>
+    <button class="discord-button" onclick="window.location.href='https://discord.gg/spinbot'">Join Discord</button>
+    <div class="arrow-down" onclick="scrollFeatures()"></div>
+
+    <div class="scroll-squares">
+        <a href="https://discord.gg/spinbot" class="square">CSGO Internal</a>
+        <a href="https://discord.gg/spinbot" class="square">CSGO External</a>
+    </div>
+
+    <div class="base-cheat-features">
+        <h2>Base Cheat Features</h2>
+        <p>Unload</p>
+        <p>Streamproof</p>
+        <p>Team Check</p>
+        <p>Item Esp</p>
+        <p>Box Esp</p>
+        <p>Skeleton Esp</p>
+        <p>Chams-Invis/vis</p>
+        <p>Health Esp</p>
+        <p>Aimbot</p>
+        <p>TriggerBot</p>
+        <p>Anti-Recoil</p>
+        <p>Bhop</p>
+        <p>Radar</p>
+        <p>Head Esp</p>
+        <p>Pelvis Esp</p>
+        <p>Name Esp</p>
+        <p>Sound Esp</p>
+    </div>
+
+    <script>
+        function scrollFeatures() {
+            var featuresPosition = document.querySelector('.base-cheat-features').offsetTop;
+            window.scrollTo({
+                top: featuresPosition,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
